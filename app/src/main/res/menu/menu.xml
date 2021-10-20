@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/stickerss"
+        android:enabled="true"
+        android:icon="@drawable/ic_sticker"
+        android:title="Stickers"
+        />
+
+    <item
+        android:id="@+id/fontss"
+        android:enabled="true"
+        android:icon="@drawable/ic_fonts"
+        android:title="Fonts"
+        />
+
+    <item
+        android:id="@+id/likess"
+        android:enabled="true"
+        android:icon="@drawable/ic_likes"
+        android:title="Likes"
+        />
+
+    <item
+        android:id="@+id/q_and_aa"
+        android:enabled="true"
+        android:icon="@drawable/ic_q_a"
+        android:title="Q&amp;A"
+        />
+
+</menu>

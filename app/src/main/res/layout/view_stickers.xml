@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ViewStartWindowStickers.ViewStickers"
+    android:background="#000000"
+    >
+<FrameLayout
+    android:id="@+id/frameNavMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toTopOf="@id/botNavigation"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="#232323"
+        >
+
+        <TextView
+            android:id="@+id/titleTextViewStickers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:text="Stickers"
+            android:textStyle="bold"
+            android:textColor="#FF9F0A"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="bottom"
+            />
+    </FrameLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSticker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextViewStickers"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/botNavigation"
+        />
+
+</FrameLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:labelVisibilityMode="labeled"
+        app:itemIconSize="32dp"
+        app:itemIconTint="@color/color_but_nav"
+        app:itemTextColor="@color/color_but_nav"
+        android:background="#232323"
+        app:menu="@menu/menu"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

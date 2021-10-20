@@ -1,0 +1,2 @@
+rootProject.name = "FontForInstagram"
+include ':app'

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".viewFonts.ViewFonts"
+    android:background="#000000"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrFonts"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        >
+
+        <TextView
+            android:id="@+id/titleTextViewFonts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:text="Fonts"
+            android:textStyle="bold"
+            android:textColor="#FF9F0A"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginBottom="41dp"
+            android:layout_marginLeft="16dp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="343dp"
+            android:layout_height="32dp"
+            app:layout_constraintTop_toBottomOf="@id/titleTextViewFonts"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="5dp"
+            >
+
+            <Button
+                android:id="@+id/buttonColorFull"
+                android:layout_width="169dp"
+                android:layout_height="28dp"
+                app:layout_constraintTop_toBottomOf="@id/titleTextViewFonts"
+                android:text="ColorFull"
+                android:background="@drawable/back_buttons_fonts_classic"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/orange"
+                />
+
+            <Button
+                android:id="@+id/buttonClassic"
+                android:layout_width="169dp"
+                android:layout_height="28dp"
+                app:layout_constraintLeft_toRightOf="@id/buttonColorFull"
+                android:text="Classic"
+                android:background="@drawable/back_buttons_fons_classic_disable"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<fragment
+    android:id="@+id/fragg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginBottom="88dp"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="150dp"
+    android:name="com.example.fontforinstagram.viewFonts.switchFonts.ViewColorFul.ViewColorFul"
+    tools:layout="@layout/fragment_view_color_ful"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

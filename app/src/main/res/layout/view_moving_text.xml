@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ViewMovingText.ViewMovingText"
+    android:background="#C51FB4"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainConstr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="61dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageViewFromTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shapeimage"
+            app:layout_constraintBottom_toBottomOf="@id/editText"
+            app:layout_constraintLeft_toLeftOf="@id/editText"
+            app:layout_constraintRight_toRightOf="@id/editText"
+            app:layout_constraintTop_toTopOf="@id/editText"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Your text"
+            android:textAlignment="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="43sp"
+            android:fontFamily="@font/roboto_medium"
+            android:background="@drawable/shapeimage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textnull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textViewForEditCopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        />
+
+    <Button
+        android:id="@+id/buttonEdiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/shapeimage"
+        />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollViewFonts"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:scrollbarThumbHorizontal="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="100dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            >
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:id="@+id/btnMozer"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="Mozer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="150dp"
+                android:background="@drawable/ring_background"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mozer"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                />
+
+            <Button
+                android:id="@+id/btnArthingon"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ring_background"
+                android:text="Arthingon"
+                android:textColor="@color/white"
+                android:fontFamily="@font/arthington"
+                android:textSize="5sp"
+                android:textStyle="bold"
+
+                />
+
+            <Button
+                android:id="@+id/btnExoLight"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="150dp"
+                android:background="@drawable/ring_background"
+                android:fontFamily="@font/exo_extralight"
+                android:text="ExoLight"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+            <Button
+                android:id="@+id/btnmazzardsoftm"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="mazzardsoftm"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="150dp"
+                android:background="@drawable/ring_background"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mazzardsoftm"
+                android:textStyle="bold"
+                android:textSize="6sp"
+                android:layout_marginLeft="15dp"
+                />
+
+
+            <Button
+                android:id="@+id/btnRoboto"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="150dp"
+                android:background="@drawable/ring_background"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Roboto"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp" />
+
+
+        </LinearLayout>
+
+
+
+    </HorizontalScrollView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
