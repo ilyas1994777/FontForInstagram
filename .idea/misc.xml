@@ -21,11 +21,13 @@
         <entry key="app/src/main/res/drawable/ic_asd.xml" value="0.2401826484018265" />
         <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.1638888888888889" />
         <entry key="app/src/main/res/drawable/ic_diamond.xml" value="0.1638888888888889" />
+        <entry key="app/src/main/res/drawable/ic_like_for_favorite.xml" value="0.1638888888888889" />
         <entry key="app/src/main/res/drawable/ic_likes.xml" value="0.1638888888888889" />
         <entry key="app/src/main/res/drawable/ic_newyear.xml" value="0.1638888888888889" />
         <entry key="app/src/main/res/drawable/ic_q_a.xml" value="0.1638888888888889" />
         <entry key="app/src/main/res/drawable/ic_smile113333.xml" value="0.2401826484018265" />
         <entry key="app/src/main/res/drawable/ic_sticker.xml" value="0.3731481481481482" />
+        <entry key="app/src/main/res/drawable/ic_yesterday_without_shadow.xml" value="0.19722222222222222" />
         <entry key="app/src/main/res/drawable/item_stickers_background.xml" value="0.2361111111111111" />
         <entry key="app/src/main/res/drawable/ring_background.xml" value="0.2953125" />
         <entry key="app/src/main/res/drawable/shapeimage.xml" value="0.2564814814814815" />
@@ -38,16 +40,22 @@
         <entry key="app/src/main/res/layout/fragment_work_with_text.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_write_text.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/item_classic_recycler_view.xml" value="0.22602739726027396" />
+        <entry key="app/src/main/res/layout/item_favorite_classic_recycler.xml" value="0.22602739726027396" />
         <entry key="app/src/main/res/layout/item_favorite_stickers_recycler.xml" value="0.22602739726027396" />
         <entry key="app/src/main/res/layout/item_fonts_recycler_view.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/item_like_colorful.xml" value="0.22602739726027396" />
         <entry key="app/src/main/res/layout/item_stickers_recycler_view.xml" value="0.22916666666666666" />
+        <entry key="app/src/main/res/layout/view__switch_to_classic.xml" value="0.22602739726027396" />
         <entry key="app/src/main/res/layout/view_classic.xml" value="0.14953703703703702" />
-        <entry key="app/src/main/res/layout/view_favorite_stickers.xml" value="0.22602739726027396" />
+        <entry key="app/src/main/res/layout/view_favorite_stickers.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/view_favorite_stickers_fragment.xml" value="0.22602739726027396" />
         <entry key="app/src/main/res/layout/view_favorites_likes.xml" value="0.165" />
         <entry key="app/src/main/res/layout/view_fonts.xml" value="0.25" />
         <entry key="app/src/main/res/layout/view_likes.xml" value="0.14953703703703702" />
         <entry key="app/src/main/res/layout/view_moving_text.xml" value="0.23072916666666668" />
         <entry key="app/src/main/res/layout/view_stickers.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/view_stickers_fonts.xml" value="0.22602739726027396" />
+        <entry key="app/src/main/res/layout/view_switch_to_colorful.xml" value="0.22602739726027396" />
         <entry key="app/src/main/res/layout/view_writing_text.xml" value="0.25" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.22916666666666666" />
         <entry key="app/src/main/res/menu/menu_navigation_bar.xml" value="0.2578125" />

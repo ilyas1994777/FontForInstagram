@@ -1,19 +1,8 @@
 package com.example.fontforinstagram
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
-import android.view.GestureDetector
-import android.view.MotionEvent
-import android.view.ScaleGestureDetector
-import android.view.View
-import android.widget.ImageView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.dinuscxj.gesture.MultiTouchGestureDetector
-import com.example.fontforinstagram.ViewMovingText.ViewMovingText
-import com.example.fontforinstagram.ViewStartWindowStickers.ViewStickers
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.fontforinstagram.botton_navigation.ViewStickers.ViewStickers
 
 
 class MainActivity : AppCompatActivity() {

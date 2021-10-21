@@ -3,17 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewFonts.switchFonts.viewClassic.ViewClassic"
+    tools:context=".botton_navigation.viewFonts.switchFonts.viewClassic.ViewClassic"
     android:background="@color/black"
     >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Second FRAGMENTT"
-        android:gravity="center"
-        android:textSize="30sp"
-        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerClassic"

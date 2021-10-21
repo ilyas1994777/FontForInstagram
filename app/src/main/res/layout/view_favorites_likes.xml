@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".viewLikes.ViewFavoritesLikes"
+    tools:context=".botton_navigation.viewLikesEqualFavorite.ViewFavoritesLikes"
     android:background="@color/black"
     >
 
@@ -84,12 +84,12 @@
   </androidx.constraintlayout.widget.ConstraintLayout>
 
     <fragment
-        android:id="@+id/fragmentFav"
+        android:id="@+id/fragmentSwitchFontStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="150dp"
         android:layout_marginBottom="100dp"
-        android:name="com.example.fontforinstagram.viewLikes.favoriteStickers.view_favorite_stickers"
+        android:name="com.example.fontforinstagram.botton_navigation.viewLikesEqualFavorite.switchToStickers.view_favorite_stickers"
         tools:layout="@layout/view_favorite_stickers"
         app:layout_constraintTop_toBottomOf="@id/constrFavorites"
         />
