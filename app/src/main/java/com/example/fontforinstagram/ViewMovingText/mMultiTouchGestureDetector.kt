@@ -7,8 +7,60 @@ import android.widget.ImageView
 import android.widget.Toast
 import com.dinuscxj.gesture.MultiTouchGestureDetector
 import com.example.fontforinstagram.Singleton
+import com.example.fontforinstagram.viewAddingText.ViewAddingText
 
- class mDoubleTouch(val imageView: ImageView, val nn: ViewMovingText):GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
+class AddTextTap(var addText : ViewAddingText) : GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener{
+    override fun onDown(e: MotionEvent?): Boolean {
+        return true
+    }
+
+    override fun onShowPress(e: MotionEvent?) {
+
+    }
+
+    override fun onSingleTapUp(e: MotionEvent?): Boolean {
+        addText.flag = true
+        return true
+    }
+
+    override fun onScroll(
+        e1: MotionEvent?,
+        e2: MotionEvent?,
+        distanceX: Float,
+        distanceY: Float
+    ): Boolean {
+        return true
+    }
+
+    override fun onLongPress(e: MotionEvent?) {
+
+
+    }
+
+    override fun onFling(
+        e1: MotionEvent?,
+        e2: MotionEvent?,
+        velocityX: Float,
+        velocityY: Float
+    ): Boolean {
+       return true
+    }
+
+    override fun onSingleTapConfirmed(e: MotionEvent?): Boolean {
+       return true
+    }
+
+    override fun onDoubleTap(e: MotionEvent?): Boolean {
+        return true
+    }
+
+    override fun onDoubleTapEvent(e: MotionEvent?): Boolean {
+        return true
+    }
+
+}
+
+class mDoubleTouch(val imageView: ImageView, val nn: ViewMovingText):GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
 
 
     override fun onSingleTapConfirmed(e: MotionEvent?): Boolean {

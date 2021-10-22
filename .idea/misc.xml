@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/drawable-anydpi/ic_a_and_a.xml" value="0.2401826484018265" />
         <entry key="app/src/main/res/drawable-anydpi/ic_a_and_a_question.xml" value="0.2401826484018265" />
         <entry key="app/src/main/res/drawable-anydpi/ic_a_and_a_rectangle.xml" value="0.2401826484018265" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_back_adding_text.xml" value="0.19722222222222222" />
         <entry key="app/src/main/res/drawable-anydpi/ic_diamond.xml" value="0.2401826484018265" />
         <entry key="app/src/main/res/drawable-anydpi/ic_fonts.xml" value="0.2537037037037037" />
         <entry key="app/src/main/res/drawable-anydpi/ic_ggggggggg.xml" value="0.2401826484018265" />
@@ -13,10 +14,12 @@
         <entry key="app/src/main/res/drawable-anydpi/ic_like_disabled.xml" value="0.2324074074074074" />
         <entry key="app/src/main/res/drawable-anydpi/ic_likes.xml" value="0.2537037037037037" />
         <entry key="app/src/main/res/drawable-anydpi/ic_q_and_a.xml" value="0.2537037037037037" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_share.xml" value="0.19722222222222222" />
         <entry key="app/src/main/res/drawable-anydpi/ic_stickers.xml" value="0.2537037037037037" />
         <entry key="app/src/main/res/drawable-anydpi/ic_zxc.xml" value="0.2401826484018265" />
         <entry key="app/src/main/res/drawable/back_buttons_fons_classic_disable.xml" value="0.2324074074074074" />
         <entry key="app/src/main/res/drawable/back_buttons_fonts_classic.xml" value="0.2324074074074074" />
+        <entry key="app/src/main/res/drawable/custom_rectangle_paste_write_text.xml" value="0.2401826484018265" />
         <entry key="app/src/main/res/drawable/delete.xml" value="0.1638888888888889" />
         <entry key="app/src/main/res/drawable/ic_asd.xml" value="0.2401826484018265" />
         <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.1638888888888889" />
@@ -46,6 +49,7 @@
         <entry key="app/src/main/res/layout/item_like_colorful.xml" value="0.22602739726027396" />
         <entry key="app/src/main/res/layout/item_stickers_recycler_view.xml" value="0.22916666666666666" />
         <entry key="app/src/main/res/layout/view__switch_to_classic.xml" value="0.22602739726027396" />
+        <entry key="app/src/main/res/layout/view_adding_text.xml" value="0.25" />
         <entry key="app/src/main/res/layout/view_classic.xml" value="0.14953703703703702" />
         <entry key="app/src/main/res/layout/view_favorite_stickers.xml" value="0.125" />
         <entry key="app/src/main/res/layout/view_favorite_stickers_fragment.xml" value="0.22602739726027396" />

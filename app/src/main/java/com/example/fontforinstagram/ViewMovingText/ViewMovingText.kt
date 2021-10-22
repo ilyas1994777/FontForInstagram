@@ -5,6 +5,9 @@ import android.content.Context
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.graphics.*
 import android.os.Bundle
+import android.os.CountDownTimer
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -23,10 +26,10 @@ import com.example.fontforinstagram.R
 import com.example.fontforinstagram.Singleton
 import android.view.MotionEvent
 import androidx.core.content.ContextCompat.getSystemService
+import androidx.lifecycle.lifecycleScope
+import com.example.fontforinstagram.viewAddingText.ViewAddingText
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
-
-
+import kotlinx.coroutines.*
 
 
 class ViewMovingText : Fragment(), IContractMovingText.View, iState, View.OnClickListener{
@@ -47,15 +50,40 @@ class ViewMovingText : Fragment(), IContractMovingText.View, iState, View.OnClic
     private var presenter : PresenterMovingText? = null
     private var onTouch: MultiTouchGestureDetector? = null
     private var onDoubleTouch: GestureDetectorCompat? = null
+    private var mHandler = Handler(Looper.getMainLooper())
     var flag = false
     set(value) {
         field = value
         if (flag == true) {
-            presenter!!.onOffMultiTouch(false)
-            Toast.makeText(context, "qwee", Toast.LENGTH_SHORT).show()
+//            presenter!!.onOffMultiTouch(false)
+//            Toast.makeText(context, "qwee", Toast.LENGTH_SHORT).show()
+            Singleton.switchFragment(ViewAddingText())
         }
     }
 
+    var state = false
+    set(value) {
+        field = value
+        if (state == true) {
+
+            var getText = arguments?.getString("key", textViewForEditCopy!!.text.toString())
+            editText!!.setText(getText)
+
+
+
+
+
+
+
+
+
+//            presenter?.onOffMultiTouch(true)
+//            convertToBitmanForImagage()
+
+        }
+    }
+
+    
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -90,6 +118,7 @@ class ViewMovingText : Fragment(), IContractMovingText.View, iState, View.OnClic
 
 
 
+
         // конвертация Edit Text в Image View
         val vto = editText!!.viewTreeObserver
         vto.addOnGlobalLayoutListener { editText!!.buildDrawingCache() }
@@ -99,7 +128,26 @@ class ViewMovingText : Fragment(), IContractMovingText.View, iState, View.OnClic
 //            return@setOnLongClickListener true
 //        }
 
+
+            state = true
+
+
+
+//        runBlocking {
+            lifecycleScope.launch(Dispatchers.Main){
+                            presenter?.onOffMultiTouch(true)
+
+            }
+
+
+//        }
+
+
+
+       
+
         buttonEdiText.setOnClickListener {
+            Toast.makeText(context, "STATE ON", Toast.LENGTH_SHORT).show()
 
             presenter?.onOffMultiTouch(true)
         }
@@ -116,7 +164,7 @@ class ViewMovingText : Fragment(), IContractMovingText.View, iState, View.OnClic
 
     // конвертация Edit Text в Image View
     fun convertToBitmanForImagage() : ImageView{
-        Log.d("qweqw", "qwew")
+//        Toast.makeText(context, "CONVERT", Toast.LENGTH_SHORT).show()
         editText!!.buildDrawingCache()
         imageViewFromTextView!!.setImageBitmap(editText!!.drawingCache)
 
