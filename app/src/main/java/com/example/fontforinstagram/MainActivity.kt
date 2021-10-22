@@ -2,7 +2,7 @@ package com.example.fontforinstagram
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.fontforinstagram.botton_navigation.ViewStickers.ViewStickers
+import com.example.fontforinstagram.botton_navigation.button_ViewStickers.ViewStickers
 
 
 class MainActivity : AppCompatActivity() {

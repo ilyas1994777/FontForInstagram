@@ -65,14 +65,14 @@ class ViewMovingText : Fragment(), IContractMovingText.View, iState, View.OnClic
         }
     }
 
-    var state = false
-    set(value) {
-        field = value
-        if (state == true) {
-            var getText = arguments?.getString("key", textViewForEditCopy!!.text.toString())
-            editText!!.setText(getText)
-        }
-    }
+//    var state = false
+//    set(value) {
+//        field = value
+//        if (state == true) {
+//            var getText = arguments?.getString("key", textViewForEditCopy!!.text.toString())
+//            editText!!.setText(getText)
+//        }
+//    }
 
     
     @SuppressLint("ClickableViewAccessibility")
@@ -107,60 +107,42 @@ class ViewMovingText : Fragment(), IContractMovingText.View, iState, View.OnClic
         btnRoboto.setOnClickListener(this)
         btnMozer.setOnClickListener(this)
 
-
-
-
         // конвертация Edit Text в Image View
         val vto = editText!!.viewTreeObserver
         vto.addOnGlobalLayoutListener { editText!!.buildDrawingCache() }
 
-//        buttonEdiText.setOnLongClickListener {
-//            presenter!!.onOffMultiTouch(false)
-//            return@setOnLongClickListener true
-//        }
 
-//                state = true
-//                lifecycleScope.launch(Dispatchers.Main){
-                    runBlocking {
-                        withContext(Dispatchers.IO){
-                            var getText = arguments?.getString("key", textViewForEditCopy!!.text.toString())
-                            mHandler.post(Runnable {
-                                editText!!.setText(getText)
-                                if (editText!!.text.isNotEmpty())
-                                    flagTextIsNotNull = true
-                            })
+                    // получение аргументами с значениями
+//                    runBlocking {
+//                        withContext(Dispatchers.IO){
+//                            var getText = arguments?.getString("key", textViewForEditCopy!!.text.toString())
+//                            mHandler.post(Runnable {
+//                                editText!!.setText(getText)
+//                                if (editText!!.text.isNotEmpty())
+//                                    flagTextIsNotNull = true
+//                            })
+//
+//                        }
+//                    }
 
-                        }
-                    }
+        // получение аргументами с значениями
+        runBlocking {
+            var getText = arguments?.getString("key", textViewForEditCopy!!.text.toString())
+            withContext(Dispatchers.IO){
+                textViewForEditCopy?.text = async { getText }.await()
+            }
+            editText!!.setText(getText)
+            if (editText!!.text.isNotEmpty())
+            flagTextIsNotNull = true
+        }
 
-
-//                }
-
-
-
-
-
-
+                // если edit не пустой то запускаем bitmap + multiTouch
                 runBlocking {
                     mHandler.post(Runnable {
                         if (flagTextIsNotNull == true)
                             presenter?.onOffMultiTouch(true)
                     })
                 }
-
-
-
-
-
-
-
-       
-
-        buttonEdiText.setOnClickListener {
-            Toast.makeText(context, "STATE ON", Toast.LENGTH_SHORT).show()
-
-            presenter?.onOffMultiTouch(true)
-        }
     }
 
 
@@ -261,7 +243,7 @@ class ViewMovingText : Fragment(), IContractMovingText.View, iState, View.OnClic
                 editText!!.isCursorVisible = false
                 buttonEdiText.isVisible = false
                 imageViewFromTextView!!.isVisible = true
-                editText!!.setBackgroundColor(Color.TRANSPARENT);
+                editText!!.setBackgroundColor(Color.TRANSPARENT)
                 convertToBitmanForImagage()
 //              imageViewFromTextView!!.setImageResource(R.drawable.clearpngg)
                 iStates.start()

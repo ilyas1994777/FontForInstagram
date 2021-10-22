@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".botton_navigation.viewFonts.switchFonts.viewClassic.ViewClassic"
+    tools:context=".botton_navigation.button_ViewFonts.switchFonts.viewClassic.ViewClassic"
     android:background="@color/black"
     >
 

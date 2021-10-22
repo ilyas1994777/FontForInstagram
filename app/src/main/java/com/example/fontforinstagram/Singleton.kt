@@ -15,7 +15,6 @@ object Singleton {
     fun switchFragment(fm : Fragment){
         mainActivity?.supportFragmentManager!!.beginTransaction().apply {
             replace(R.id.emptyFragment, fm)
-            addToBackStack(null)
             commit()
         }
     }

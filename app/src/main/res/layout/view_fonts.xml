@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".botton_navigation.viewFonts.ViewFonts"
+    tools:context=".botton_navigation.button_ViewFonts.ViewFonts"
     android:background="#000000"
     >
 
@@ -80,7 +80,7 @@
     android:layout_marginBottom="88dp"
     app:layout_constraintTop_toTopOf="parent"
     android:layout_marginTop="150dp"
-    android:name="com.example.fontforinstagram.botton_navigation.viewFonts.switchFonts.ViewColorFul.ViewColorFul"
+    android:name="com.example.fontforinstagram.botton_navigation.button_ViewFonts.switchFonts.ViewColorFul.ViewColorFul"
     tools:layout="@layout/fragment_view_color_ful"
     />
 

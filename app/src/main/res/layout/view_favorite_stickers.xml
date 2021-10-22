@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".botton_navigation.viewLikesEqualFavorite.switchToStickers.view_favorite_stickers"
+    tools:context=".botton_navigation.button_ViewLikesEqualFavorite.switchToStickers.view_favorite_stickers"
     android:background="@color/black">
 
     <androidx.recyclerview.widget.RecyclerView
