@@ -19,7 +19,7 @@ class AddTextTap(var addText : ViewAddingText) : GestureDetector.OnGestureListen
     }
 
     override fun onSingleTapUp(e: MotionEvent?): Boolean {
-        addText.flag = true
+        addText.sendTextForViewMovingText = true
         return true
     }
 
@@ -69,11 +69,7 @@ class mDoubleTouch(val imageView: ImageView, val nn: ViewMovingText):GestureDete
     }
 
     override fun onDoubleTap(e: MotionEvent?): Boolean {
-//        viewMovingText.flag = true
-
-        nn.flag = true
-
-//        Toast.makeText(Singleton.mainActivity, "Double Tap", Toast.LENGTH_SHORT).show()
+        nn.doubleTabForEditText = true
         return true
     }
 

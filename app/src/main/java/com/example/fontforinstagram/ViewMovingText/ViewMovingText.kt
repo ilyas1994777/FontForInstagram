@@ -51,13 +51,17 @@ class ViewMovingText : Fragment(), IContractMovingText.View, iState, View.OnClic
     private var onTouch: MultiTouchGestureDetector? = null
     private var onDoubleTouch: GestureDetectorCompat? = null
     private var mHandler = Handler(Looper.getMainLooper())
-    var flag = false
+    var flagTextIsNotNull = false
+    var doubleTabForEditText = false
     set(value) {
         field = value
-        if (flag == true) {
-//            presenter!!.onOffMultiTouch(false)
-//            Toast.makeText(context, "qwee", Toast.LENGTH_SHORT).show()
-            Singleton.switchFragment(ViewAddingText())
+        if (doubleTabForEditText == true) {
+
+            val viewAdd = ViewAddingText()
+            val bundle = Bundle()
+            bundle.putString("keys", editText!!.text.toString())
+            viewAdd.arguments = bundle
+            Singleton.switchFragment(viewAdd)
         }
     }
 
@@ -65,21 +69,8 @@ class ViewMovingText : Fragment(), IContractMovingText.View, iState, View.OnClic
     set(value) {
         field = value
         if (state == true) {
-
             var getText = arguments?.getString("key", textViewForEditCopy!!.text.toString())
             editText!!.setText(getText)
-
-
-
-
-
-
-
-
-
-//            presenter?.onOffMultiTouch(true)
-//            convertToBitmanForImagage()
-
         }
     }
 
@@ -128,19 +119,38 @@ class ViewMovingText : Fragment(), IContractMovingText.View, iState, View.OnClic
 //            return@setOnLongClickListener true
 //        }
 
+//                state = true
+//                lifecycleScope.launch(Dispatchers.Main){
+                    runBlocking {
+                        withContext(Dispatchers.IO){
+                            var getText = arguments?.getString("key", textViewForEditCopy!!.text.toString())
+                            mHandler.post(Runnable {
+                                editText!!.setText(getText)
+                                if (editText!!.text.isNotEmpty())
+                                    flagTextIsNotNull = true
+                            })
 
-            state = true
+                        }
+                    }
+
+
+//                }
 
 
 
-//        runBlocking {
-            lifecycleScope.launch(Dispatchers.Main){
+
+
+
+                runBlocking {
+                    mHandler.post(Runnable {
+                        if (flagTextIsNotNull == true)
                             presenter?.onOffMultiTouch(true)
+                    })
+                }
 
-            }
 
 
-//        }
+
 
 
 
